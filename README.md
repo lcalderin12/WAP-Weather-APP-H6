@@ -10,7 +10,6 @@ Rain or shine, hail or thunder, this weather app has exactly what you need to st
 
 
 ## Screenshots
-<br>
 ![](img/wap.png)
-<br>
+
 ![](img/miami.png)
