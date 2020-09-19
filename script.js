@@ -91,7 +91,8 @@ $.ajax({
         method: "GET"
       }).then(function(response) {
         //date, img icon, temp, and humidity
-        var currentDate = response.list[0].dt_txt;
+       // var currentDate = response.list[0].dt_txt;
+       var currentDate = new Date();
         var currentDateDiv = $("<h5>").html(currentDate);
         $("#cityDate").html(currentDateDiv);
 
