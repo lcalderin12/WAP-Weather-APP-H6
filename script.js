@@ -10,7 +10,7 @@ $("#inputForm").submit(function(event) {
 
     localStorage.setItem("lastSearch", city)
     // Here we are building the URL we need to query the database
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=d73e16c126e3f1214d6b4bf3e6b7612c";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=d73e16c126e3f1214d6b4bf3e6b7612c";
 
 // We then created an AJAX call
 $.ajax({
@@ -22,7 +22,7 @@ $.ajax({
     $("#cityName").html(cityName);
 
     var icon = response.weather[0].icon;
-    var iconDiv = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + icon +"@2x.png")
+    var iconDiv = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + icon +"@2x.png")
     $("#icon").html(iconDiv);
 
     var temp = ((response.main.temp-273.15)*9/5+32).toFixed(2); //changing from K to farenheit
@@ -44,7 +44,7 @@ $.ajax({
    //variables for next ajax , and ajax itself, is placed within the first ajax to pull latitude and longitude info
    var lat =response.coord.lat;
    var lon = response.coord.lon;
-   var queryURL ="http://api.openweathermap.org/data/2.5/uvi?appid=d73e16c126e3f1214d6b4bf3e6b7612c&lat=" + lat + "&lon=" + lon;
+   var queryURL ="https://api.openweathermap.org/data/2.5/uvi?appid=d73e16c126e3f1214d6b4bf3e6b7612c&lat=" + lat + "&lon=" + lon;
 
    $.ajax({
        url: queryURL,
@@ -88,7 +88,7 @@ $.ajax({
 
     //this ajax will call up 5 weather forecast. 
     //it is placed within the "submit form" event listner but does not require any other past variable from prior ajax
-    var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=d73e16c126e3f1214d6b4bf3e6b7612c";
+    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=d73e16c126e3f1214d6b4bf3e6b7612c";
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -99,7 +99,7 @@ $.ajax({
         var date1Div= $("<li>").text(date1);
 
         var icon1 = response.list[6].weather[0].icon;
-        var icon1Div = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + icon1 +"@2x.png")
+        var icon1Div = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + icon1 +"@2x.png")
 
         var temp1 = ((response.list[6].main.temp-273.15)*9/5+32).toFixed(2);
         var temp1Div= $("<li>").text("Temp: " + temp1);
@@ -119,7 +119,7 @@ $.ajax({
         var date2Div= $("<li>").text(date2);
 
         var icon2 = response.list[14].weather[0].icon;
-        var icon2Div = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + icon2 +"@2x.png")
+        var icon2Div = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + icon2 +"@2x.png")
 
         var temp2 = ((response.list[14].main.temp-273.15)*9/5+32).toFixed(2);
         var temp2Div= $("<li>").text("Temp: " + temp2);
@@ -138,7 +138,7 @@ $.ajax({
         var date3Div= $("<li>").text(date3);
 
         var icon3 = response.list[22].weather[0].icon;
-        var icon3Div = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + icon3 +"@2x.png")
+        var icon3Div = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + icon3 +"@2x.png")
 
         var temp3 = ((response.list[22].main.temp-273.15)*9/5+32).toFixed(2);
         var temp3Div= $("<li>").text("Temp: " + temp3);
@@ -157,7 +157,7 @@ $.ajax({
         var date4Div= $("<li>").text(date4);
 
         var icon4 = response.list[30].weather[0].icon;
-        var icon4Div = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + icon4 +"@2x.png")
+        var icon4Div = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + icon4 +"@2x.png")
 
         var temp4 = ((response.list[30].main.temp-273.15)*9/5+32).toFixed(2);
         var temp4Div= $("<li>").text("Temp: " + temp4);
@@ -176,7 +176,7 @@ $.ajax({
         var date5Div= $("<li>").text(date5);
 
         var icon5 = response.list[38].weather[0].icon;
-        var icon5Div = $("<img>").attr("src", "http://openweathermap.org/img/wn/" + icon5 +"@2x.png")
+        var icon5Div = $("<img>").attr("src", "https://openweathermap.org/img/wn/" + icon5 +"@2x.png")
 
         var temp5 = ((response.list[38].main.temp-273.15)*9/5+32).toFixed(2);
         var temp5Div= $("<li>").text("Temp: " + temp5);
