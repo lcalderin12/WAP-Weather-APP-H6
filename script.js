@@ -73,13 +73,10 @@ $.ajax({
             listRow.append(uvLi);
           }
 
-
-
+          //places date for uv index since its only calculated at 1200 in the afternoon
         var date = response.date_iso;
         var dateDiv = $("<li>").text("Date and time of uv index: " + date);
         listRow.append(dateDiv);
-
-        // $("#cityDate").html(dateDiv);
    
         $("#weatherAPI").html(listRow);
      })
@@ -94,7 +91,12 @@ $.ajax({
         method: "GET"
       }).then(function(response) {
         //date, img icon, temp, and humidity
+        var currentDate = response.list[0].dt_txt;
+        var currentDateDiv = $("<h5>").html(currentDate);
+        $("#cityDate").html(currentDateDiv);
+
         //ajax call for 1 day later
+
         var date1= response.list[6].dt_txt;
         var date1Div= $("<li>").text(date1);
 
