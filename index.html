@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>WAP-Weather App</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./style/normalize.css">
+        <link rel="stylesheet" href="./style/skeleton.css">   
+        <link rel="stylesheet" href="./style/style.css">
+   
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">WAP: Weather App</h1>
+              <p class="lead">Bring a raincoat and umbrella for this WAP</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row"> <!--for creating dynamic columns-->
+                <!--form for city input and button-->
+                <form class="col-lg-3" id="inputForm">
+                    <div>
+                        <label for="cityInput">Find City</label>
+                        <input type="text" class="u-full-width" placeholder="City" id="cityInput">
+                        <input class="button-primary" type="submit">
+                    </div>
+                    <div id="history">
+                    </div>
+                </form>
+                <!--this is where the weather will be displayed-->
+                <aside class="col-lg-6 offset-md-1" id="weatherDiv">
+                    <h1>Weather Dashboard</h1>
+                    <div id="cityName"></div>
+                    <div id="icon"></div>
+                    <div id="cityDate"></div>
+                    <div id="weatherAPI"> </div> <!--current city weather info will get dumped here-->
+                </aside>
+            </div>
+
+            <footer id="weatherForecast" class="row">
+                <div id="day1" class="col-md-2" ></div>
+                <div id="day2" class="col-md-2"></div>
+                <div id="day3" class="col-md-2" ></div>
+                <div id="day4" class="col-md-2" ></div>
+                <div id="day5" class="col-md-2" ></div>
+            </footer>  
+              
+        </div>
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="./script.js"></script>      
+    </body>
+</html>
