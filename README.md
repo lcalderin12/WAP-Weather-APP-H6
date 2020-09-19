@@ -7,6 +7,8 @@ Rain or shine, hail or thunder, this weather app has exactly what you need to st
 ![](img/WAP.jpeg)
 ## Links
 [github page](https://github.com/lcalderin12/WAP-Weather-APP-H6)
+<br>
+[Project link](https://lcalderin12.github.io/WAP-Weather-APP-H6/)
 
 
 ## Screenshots
